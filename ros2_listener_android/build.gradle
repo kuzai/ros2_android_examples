@@ -1,22 +1,26 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.ros2.tools.gradle'
-apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'me.tatarka.retrolambda'
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+
 
 android {
-  compileSdkVersion 25
+  compileSdkVersion 21
   buildToolsVersion "25.0.2"
   defaultConfig {
     minSdkVersion 21
-    targetSdkVersion 25
+    targetSdkVersion 21
+  }
+  compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 
 buildscript {
   repositories {
     jcenter()
+    google()
     mavenCentral()
     mavenLocal()
     maven {
@@ -27,10 +31,12 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:2.3.3'
     classpath 'gradle.plugin.org.ros2.tools.gradle:ament:0.7.0'
-    classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+    // classpath 'me.tatarka:gradle-retrolambda:3.6.1'
   }
 }
 
 repositories {
+   jcenter()
+   google()
    mavenCentral()
 }
