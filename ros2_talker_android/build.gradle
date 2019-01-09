@@ -10,8 +10,8 @@ android {
     targetSdkVersion 25
   }
   compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 
@@ -27,7 +27,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.3'
+    classpath 'com.android.tools.build:gradle:3.2.1'
     classpath 'gradle.plugin.org.ros2.tools.gradle:ament:0.7.0'
     //classpath 'me.tatarka:gradle-retrolambda:3.6.1'
   }
@@ -35,6 +35,6 @@ buildscript {
 
 repositories {
    jcenter()
-   mavenCentral()
    google()
+   mavenCentral()
 }
